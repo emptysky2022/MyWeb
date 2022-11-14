@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="div1.html" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>인적사항 입력</legend>
+                이름 : <input type="text" name="name" autofocus><br>
+                학번 : <input type="text" name="number" size="10" placeholder="2022-11-05"><br>
+                비밀번호 : <input type="password" name="pass"><br>
+                성별 : 
+                <input type="radio" name="gender" value="male" checked>남성
+                <input type="radio" name="gender" value="female">여성<br>
+                개인정보 동의 여부 : <br>
+                <label for="yes">동의</label>
+                <input type="radio" name="info" id="yes" value="yes"><br>
+                <label for="no">비동의</label>
+                <input type="radio" name="info" id="no" value="no">
+            </fieldset>
+            <br>
+            
+            <fieldset>
+                <legend>선호도 조사</legend>
+                과일 선택 :
+                <input type="checkbox" name="fruits" value="apple" checked>사과
+                <input type="checkbox" name="fruits" value="grape">포도
+                <input type="checkbox" name="fruits" value="orange">오렌지<br>
+                보유 차종 선택 : <select name="cars">
+                    <option value="bmw">BMW</option>
+                    <option value="제네시스">제네시스</option>
+                    <option value="unknown" selected>몰?루</option>
+                </select><br>
+                선호하는 색상 : <input type="color" name="color" ><br>
+            </fieldset>
+            <br>
+            
+            <fieldset>
+                <legend>연락처</legend>
+                이메일 : <input type="email" name="email" readonly><br>
+                URL : <input type="url" name="url" ><br>
+                전화번호 : <input type="tel" name="tel" ><br>
+            </fieldset>
+            <br>
+            
+            <fieldset>
+                <legend>달력 입력</legend>
+                월 : <input type="month" name="month" ><br>
+                날짜 : <input type="date" name="date" ><br>
+                주 : <input type="week" name="week" ><br>
+                시간 : <input type="time" name="time" ><br>
+                지역 시간 : <input type="datetime-local" name="localdatetime" ><br>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>기타 입력</legend>
+                숫자 : <input type="number" name="number" min="1" max="10" step="2" value="3"><br>
+                범위 : <input type="range" name="range" min="1" max="10" step="2" ><br>
+                <label>10초 남음</label>
+                <progress value="50" max="60"></progress><br>
+                <label>진행률 : 30%</label>
+                <progress value="30" max="100"></progress><br>
+                <label>트래픽 초과</label>
+                <meter min="1024" max="10240" low="2048" high="8192" value="5555"></meter><br>
+                파일 첨부 : <input type="file" accept="image/jpg, image/gif"><br>
+                검색 : <input type="search">
+            </fieldset>
+            <br>
+
+            고객의 의견<br>
+            <textarea name="feedback" cols="50" rows="5"></textarea><br>
+            <input type="button" value="계산" onclick="alert('10000원입니다.')">
+            <input type="submit" value="제출"><br>
+            <button type="submit"><img src="../images/submit_btn.png" width="50px" height="50px"></button>
+            <input type="image" src="../images/click-here-button.jpg" width="100" height="50">
+        </form>
+        <button type="button" onclick="alert('안녕하세요!')">눌러보세요</button>
+    </body>
+</html>

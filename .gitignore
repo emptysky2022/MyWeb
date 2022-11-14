@@ -46,9 +46,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# images / audios
+# images / audios / videos
 */images/*
 */audios/*
+*/videos/*
 
 # zip file
 *.zip
