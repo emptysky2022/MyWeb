@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <style>
+        p{
+            background-color: #f5f5dc;
+            border: 2px solid yellowgreen;
+        }
+        #normal{
+            color: violet;
+        }
+        .target{
+            color: red;
+            text-align: center;
+        }
+        h6,p{
+            font-family: sans-serif;
+        }
+        body em{
+            color: red;
+        }
+        body > h1{
+            color: blue;
+        }
+        h1 + h2{
+            color: brown;
+        }
+        h2 ~ h3, h2 ~ h4, h2 ~ p{
+            color: pink;
+        }
+        a:link {
+            color: blue;
+        }
+        a:visited{
+            color: green;
+        }
+        a:hover{
+            color: violet;
+        }
+        li:nth-child(odd){
+            background-color: red;
+            color: darkblue;
+        }
+        li:nth-child(even){
+            background-color: blue;
+            color: white;
+        }
+        p[title]{
+            color: orange;
+            font-size: 20px;
+            background-color: khaki;
+        }
+        p[name="hello"]{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>h2단락입니다</h2>
+    <h1>This headline is<em>very</em>importent</h1>
+    <h2>h2단락입니다</h2>
+    <h3>안녕</h3>
+    <h4>하세요</h4>
+    <p>This is a paragraph.</p>
+    <p id="normal">정상적인 단락입니다.</p>
+    <h6 class="target">안녕하세요</h6>
+    <h3>안녕</h3>
+    <p>asd <em>asdfasdfas</em> f</p>
+    <h2>h2단락입니다</h2>
+    <a href="emmetTest.html">링크입니다</a>
+    <p title="">타이틀 넣은 p</p>
+    <p name="hello">hello name p</p>
+    <ul>
+        <li>안녕 친구들</li>
+        <li>안녕 친구들</li>
+        <li>안녕 친구들</li>
+        <li>안녕 친구들</li>
+        <li>안녕 친구들</li>
+        <li>안녕 친구들</li>
+        <li>안녕 친구들</li>
+        <li>안녕 친구들</li>
+        <li>안녕 친구들</li>
+    </ul>
+</body>
+</html>

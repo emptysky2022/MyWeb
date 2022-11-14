@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
+h1, p{
+    font-family: 'Kolker Brush', cursive;
+    color: black;
+}
+h1 {
+    border-bottom: 1px solid gray;
+    color: red;
+}
+body{
+    background-color: lightcyan;
+}
+em {
+    font-weight: bold;
+    color: darkred;
+}
