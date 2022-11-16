@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border image</title>
+    <style>
+        div{
+            border: 27px solid transparent;
+            width: 270px;
+            height: 54px;
+            -webkit-border-image: url(../images/border.png) 27 27 round;
+            -o-border-image: url(../images/border.png) 27 27 round;
+            border-image: url(../images/border.png) 27 27 round;
+        }
+    </style>
+</head>
+<body>
+    <div>경계 이미지가 반복되면서 그려진다.</div>
+</body>
+</html>
