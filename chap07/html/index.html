@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sky shop</title>
+        <link rel="stylesheet" href="../styles/webshop.css">
+    </head>
+    <body>
+        <header>
+            <h1>
+                <img id="logo" src="../../chap06/images/lion.png" alt="logo" width="40px" height="40px"><a href="index.html">sky shop</a>
+            </h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About Us</a></li>
+                <li><a href="index.html">News</a></li>
+                <li><a href="index.html">My Account</a></li>
+                <li><a href="index.html">Contacts</a></li>
+            </ul>
+        </nav>
+        <aside id="left">
+            <p>카테고리</p>
+            <ul>
+                <li><a target="iframe1" href="computer.html">컴퓨터</a></li>
+                <li><a target="iframe1" href="clothing.html">의류</a></li>
+                <li><a target="iframe1" href="music.html">음악</a></li>
+                <li><a target="iframe1" href="movie.html">영화</a></li>
+                <li><a target="iframe1" href="sports.html">스포츠/레저</a></li>
+                <li><a target="iframe1" href="funiture.html">가구/인테리어</a></li>
+                <li><a target="iframe1" href="food.html">식품</a></li>
+            </ul>
+        </aside>
+        <section>
+            <article>
+                <iframe name="iframe1" src="computer.html" width="100%" height="400px" scrolling="no"></iframe>
+            </article>
+        </section>
+        <aside id="right">
+            <div id="cart">
+                <h1>shopping cart</h1>
+                <p>현재 쇼핑카트에 물품이 없습니다.</p>
+                <a href="index2.html">쇼핑카트 보기</a>
+            </div>
+            <div id="login">
+                <h1>log in</h1>
+                <label for="id">아이디</label>
+                <input name="id" cols="30" rows="10"></input>
+                <label for="pass">패스워드</label>
+                <input name="pass" cols="30" rows="10"></input>
+                <button>로그인</button>
+                <button>초기화</button>
+                <br>
+                <a href="register.html" target="_blank" id="register">회원가입</a>
+                <a href="#" id="forgot">비밀번호분실</a>
+            </div>
+        </aside>
+        <footer>Copyright (c) 2022 Sky shop</footer>
+    </body>
+</html>

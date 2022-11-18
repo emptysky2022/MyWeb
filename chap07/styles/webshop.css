@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: lightgray;
+}
+header{
+    padding: 10px;
+}
+#logo{
+    padding-right: 10px;
+}
+header a{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+}
+nav ul{
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    text-align: center;
+    list-style: none;
+    min-width: 755px;
+}
+nav ul li{
+    display: inline;
+    text-transform: uppercase;
+    padding: 0 10px;
+    letter-spacing: 0.5em;
+    vertical-align: middle;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+#left{
+    float: left;
+    width: 20%;
+    padding: 0px 10px;
+}
+#left p{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+#left li{
+    background-color: black;
+}
+#left a{
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    color: white;
+}
+#left a:hover{
+    font-weight: bold;
+    text-align: right;
+    font-size: 20px;
+    background-color: red;
+    animation: 0.2s ahover;
+    animation-iteration-count: infinite;
+}
+@keyframes ahover{
+    25%{
+        color: cyan;
+    }
+    50%{
+        color: lightgreen;
+    }
+    75%{
+        color: salmon;
+    }
+    100%{
+        color: yellow;
+    }
+}
+article{
+    float: left;
+    width: 55%;
+    overflow: hidden;
+}
+#right{
+    float: left;
+    width: 20%;
+}
+#cart{
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+#right h1{
+    text-transform: capitalize;
+    font-size: 15px;
+}
+aside label,aside input{
+    display: block;
+}
+footer{
+    clear: both;
+}
+
+.buy{
+    display: block;
+    margin: 10px 5px;
+    padding: 0 5px;
+}
+
+/* computer.html */
+.computer{
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+}
+form label{
+    display: inline-block;
+    width: 120px;
+}
+
+/* index2.html */
+table, th, td{
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+    margin: 0 10px;
+}
+td{
+    width: 20%;
+}
+td:nth-child(3){
+    width: 40%;
+}
+.cart{
+    padding: 0 5px;
+}
+#first{
+    margin-left: 10px;
+}
+.carttable{
+    width: 60%;
+    margin: 0 20px;
+}
+
+/* movie.html */
+#movie{
+    margin: 10px 0;
+}
