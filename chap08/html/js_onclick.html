@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick</title>
+</head>
+<body>
+    <input type="button" value="대화상자오픈" onclick="init('홍길동', '부장');">
+    <script>
+        var count = 0;
+        function init(name, position){
+            switch(count){
+                case 0: alert("안녕하세요? " + name + " " + position + "님을 환영합니다."); count++; break;
+                case 1: alert("반갑습니다. " + name + " " + position + "님을 환영합니다."); count++; break;
+                case 2: alert("오늘 날씨가 좋네요. " + name + " " + position + "님을 환영합니다."); count++; break;
+                case 3: alert("밥 먹었어요? " + name + " " + position + "님을 환영합니다."); count++; break;
+                case 4: alert("뭐 좋아하세요? " + name + " " + position + "님을 환영합니다."); count++; break;
+                case 5: alert("할말이 더 없어요. " + name + " " + position + "님을 환영합니다."); count++; break;
+                case 6: alert("그만 하세요. " + name + " " + position + "님.."); count++; break;
+                case 7: alert("그만 하라니까?"); count++; break;
+                case 8: alert("그만 눌러 이제..."); count++; break;
+                case 9: alert("대답 안할거야"); count++; break;
+                default: alert("안해!"); count = 0; break;
+            }
+        }
+    </script>
+</body>
+</html>

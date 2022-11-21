@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 맞추기</title>
+    <script>
+        var random = Math.random()*100+1;
+        function check(){
+            var input = document.getElementById("input");
+            var count = document.getElementById("count");
+            var text = document.getElementById("text");
+            if(parseInt(input.value) == parseInt(random)) alert("정답입니다!")
+            else{
+                count.value++;
+                text.value = input.value > random ? "높습니다." : "낮습니다.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>숫자 맞추기 게임</h1>
+    <p>이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다. 숫자는 1부터 100 사이에 있습니다.</p>
+    입력: <input id="input" size="5">
+    <input type="button" value="확인" onclick="check()">
+    추측 횟수: <input id="count" size="5" disabled>
+    힌트: <input id="text" size="5" disabled>
+</body>
+</html>

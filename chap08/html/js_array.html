@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <script>
+        var array = new Array("starfruit", "rambutan", "dragon fruit");
+        array.push(new Date());
+        array.push(3.14);
+        array['b'] = "grape";
+
+        for(i = 0; i < array.length; i++){
+            document.write(array[i] + "<br>");
+        }
+        document.write(array["b"]);
+    </script>
+</body>
+</html>
