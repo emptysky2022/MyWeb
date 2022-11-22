@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date</title>
+</head>
+<body>
+    <script>
+        const today = new Date();
+        document.write(today + "<br>");
+        const d1 = new Date(2025, 07, 28, 0, 20, 20);
+        document.write(d1 + "<br>");
+
+        document.write(today.toDateString() + "<br>");
+        document.write(today.toISOString() + "<br>");
+        document.write(today.toJSON() + "<br>");
+        document.write(today.toLocaleDateString() + "<br>");
+        document.write(today.toLocaleTimeString() + "<br>");
+        document.write(today.toLocaleString() + "<br>");
+        document.write(today.toString() + "<br>");
+        document.write(today.toTimeString() + "<br>");
+        document.write(today.toUTCString() + "<br>");
+    </script>
+</body>
+</html>

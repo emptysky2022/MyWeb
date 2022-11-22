@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new Year</title>
+</head>
+<body>
+    <p id="remaining"></p>
+    <script>
+        function NewYearTimer(){
+            const today = new Date();
+            const nextYear = new Date('January 1, ' + (today.getFullYear() + 1));
+            const dday = (nextYear - today)/1000;
+            document.getElementById("remaining").innerHTML = ("내년도 선정까지 " + parseInt(dday/(60*60*24)) + 
+            "일, " + parseInt(dday/(60*60)%24) + "시간, " + parseInt(dday/60%60) + 
+            "분, " + parseInt(dday%60) + "초 남았습니다.");
+            setTimeout("NewYearTimer()", 1000);
+        }
+        NewYearTimer();
+    </script>
+</body>
+</html>

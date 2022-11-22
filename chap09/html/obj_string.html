@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkid</title>
+</head>
+<body>
+    아이디: <input type="text" id="id" size="18">
+    <button onclick="checkId()">검사</button>
+    <p id="text"></p>
+    <p>문자열 검색 <span id="indexOf"></span></p>
+    <p>문자열 매칭 : <span id="matching"></span></p>
+    <p>문자열 대체 : <span id="replace"></span></p>
+    <p>문자열 파싱 : <span id="split"></span></p>
+    <script>
+        function checkId(){
+            const input = document.getElementById("id").value;
+            if(input.length < 6)
+                document.getElementById("text").innerHTML = "아이디는 6자리 이상이어야 합니다.";
+        }
+        
+        const input = "자바스크립트에 오신것을 환영합니다";
+        const check = input.indexOf("환영");
+        document.getElementById("indexOf").innerHTML = ": " + check;
+        const s = "Like father, like son.";
+        const result = s.match(/like/ig);
+        document.getElementById("matching").innerHTML = result;
+        document.getElementById("replace").innerHTML = input.replace("자바", "타입");
+        const array = input.split(" ");
+        let str = "";
+        for(i = 0; i < array.length; i++){
+            document.getElementById("split").innerHTML += (array[i] + ",");
+        }
+    </script>
+</body>
+</html>

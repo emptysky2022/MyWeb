@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <script>
+        const myArray = new Array();
+        myArray[0] = "apple"
+        myArray[1] = "banana"
+        myArray[2] = "grape"
+        console.log(myArray)
+        document.write(myArray)
+
+        myArray[99] = "tomato"
+        console.log(myArray)
+        
+        const myArray2 = [1, "banana", {name: "홍길동"}, [10,20,30]]
+        console.log(myArray2)
+        
+        const myArray3 = new Array("둘리", "고길동", "소드마스터")
+        console.log(myArray3)
+        
+        const x = [1,2,3]
+        const y = [4,5,6]
+        const joined = x.concat(y)
+        console.log(joined)
+        
+        console.log(myArray3.indexOf("둘리"))
+        myArray3.push("마이클")
+        console.log(myArray3)
+        console.log(myArray3.pop())
+        console.log(myArray3)
+        myArray3.shift()
+        console.log(myArray3)
+        myArray3.unshift()
+        console.log(myArray3)
+
+        const numArr = myArray2.slice(3)
+        console.log(numArr)
+
+        const s = myArray.join("+")
+        console.log(s)
+
+        function isBigEnough(element, index, array){
+            return (element >= 2)
+        }
+
+        const filtered = x.filter(isBigEnough)
+        console.log(filtered)
+
+        const z = [10,11,100,101,1000]
+        let fz = z.filter(function(item, index){
+            if(item % 2 == 0) return true
+            else return false
+        })
+        console.log(fz)
+
+        fz = z.filter((item) => item % 2 === 1)
+        console.log(fz)
+        const matrix = [
+            [1,2,3],
+            [4,5,6],
+            [7,8,9]
+        ]
+        console.log(matrix)
+        console.log(matrix[0].length)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

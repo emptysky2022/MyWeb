@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object2</title>
+</head>
+<body>
+    <script>
+        function Car(model, speed, color){
+            this.color = color;
+            this.model = model;
+            this.speed = speed;
+            this.break = function(){ this.speed -= 10;};
+            this.accel = function(){ this.speed += 10;};
+        }
+        const car = new Car("D520", 120, "yellow");
+        console.log(car);
+        car.break();
+        console.log(car);
+        car.turbo = true;
+        car.showModel = function(){
+            alert("모델은 " + this.model + "입니다.");
+        };
+        car.showModel();
+        console.log(car);
+        document.write(Car.model + " " + Car.speed + " " + Car.color + " " + Car.turbo + "<br>")
+        
+    </script>
+</body>
+</html>
