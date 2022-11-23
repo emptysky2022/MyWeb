@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>full screen</title>
+</head>
+<body id="target" onload="onLoadDoc()">
+    <a href="#" onclick="maxopen('https://www.google.com', 'resize=1, scrollbar=1, status=1')">전체화면보기</a>
+    <a href="#" onclick="replace('https://www.google.com')">이동하기</a><br>
+    <form method="post">
+        <input type="radio" name="r1" value="blue" onclick="changeColor('lightblue')">파란색
+        <input type="radio" name="r1" value="green" onclick="changeColor('lightgreen')">초록색
+        <p>영어단어: 
+        <input type="text" id="name" onchange="sub()">입력필드를 벗어나면 소문자로 변경이 됨
+        </p>
+        <div style="background-color:yellow; width: 200px;" onmouseover="over(this)" onmouseout="out(this)">마우스를 이 요소 위에 이동하세요.</div>
+    </form>
+
+    <button onmousedown="down(this)" onmouseup="up(this)">눌러보세요</button>
+    <script>
+        function maxopen(url, winatt){
+            const maxWindow = window.open(url, "", winatt)
+            maxWindow.moveTo(0,0)
+            maxWindow.resizeTo(screen.availWidth, screen.availHeight)
+        }
+        function replace(url){
+            location.replace(url)
+        }
+        for(let key in navigator){
+            value = navigator[key]
+            document.write(key + " : " + value + "<br>")
+        }
+        function changeColor(color){
+            document.getElementById("target").style.backgroundColor = color
+        }
+        function onLoadDoc(){
+            alert("문서가 로드되었습니다.")
+            document.body.style.backgroundColor = "violet"
+        }
+        function sub(){
+            const x = document.getElementById("name")
+            x.value = x.value.toLowerCase()
+        }
+        function over(elem){
+            elem.style.border = "4px solid red"
+        }
+        function out(elem){
+            elem.style.border = "none"
+        }
+        function down(elem){
+            elem.style.backgroundColor = "red"
+            document.body.style.backgroundColor = "red"
+        }
+        function up(elem){
+            elem.style.backgroundColor = "gray"
+        }
+    </script>
+</body>
+</html>

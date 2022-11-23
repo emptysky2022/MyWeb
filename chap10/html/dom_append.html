@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM에 새로운 요소 추가하기</title>
+    <style>
+        #target{
+            font: 20px bold
+        }
+        #target:hover{
+            color: violet
+        }
+    </style>
+    <script>
+        function addText(text){
+            // document.getElementById("target").innerHTML += text
+
+            if(document.createTextNode){
+                const node = document.createTextNode(text)
+                let val = document.getElementById("target").firstChild
+                document.getElementById("target").appendChild(node)
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div id="target" onclick="addText('동적 추가 요소')">여기를 클릭하세요</div>
+</body>
+</html>

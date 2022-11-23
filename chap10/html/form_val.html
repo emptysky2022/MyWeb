@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼의 공백 검증</title>
+</head>
+<body>
+    <h3>회원가입</h3>
+    <form action="#">
+        이름: <input type="text" id="name" onchange="checkBlank(this)"><br>
+        주소: <input type="text" id="addr" onclick="display(this)"><br>
+        생일: <input type="date" id="birthday"><br>
+        아이디(6-8자): <input type="text" id="username"><br><span id="msg"></span>
+        이메일: <input type="email" id="email"><br>
+        번호: <input type="tel" id="phone"><br>
+        <input type="submit" value="확인" onclick="checkForm(this)"><br>
+    </form>
+    <script>
+        function checkBlank(elem){
+            if(elem.value.length < 3){
+                alert("이름은 두글자 이상으로 입력해주세요")
+                elem.focus()
+            }
+        }
+        function checkForm(){
+            const username = document.getElementById("username").value
+            if(username.length == 0)
+                document.getElementById("msg").innerHTML = "필드가 비어있네요<br>"
+            else if(!(username.length >= 6 && username.length <= 8))
+                document.getElementById("msg").innerHTML = "아이디는 6~8자리 사이로 입력해주세요<br>"
+            else{
+                document.getElementById("msg").innerHTML = ""
+                return
+            }
+            document.getElementById("username").focus()
+        }
+        function display(form){
+            alert(form["addr"].value)
+        }
+    </script>
+</body>
+</html>

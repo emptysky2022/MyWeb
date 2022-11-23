@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image change</title>
+    <script>
+        let check = true;
+        function changeImage(){
+            let img = document.getElementsByTagName("img")[0]
+            let text = document.getElementsByTagName("h1")[0]
+
+            if(check){
+                img.src = "../images/lion.png"
+                img.style.width = "200px"
+                img.style.height = "200px"
+                img.alt = "귀여운 고양이(?)"
+                check = false
+                text.style.color = "red"
+                test.style.font = 'Century School'
+                text.style.fontStyle = "italic"
+            }else{
+                img.src = "../images/pome.png"
+                img.style.width = "120px"
+                img.style.height = "100px"
+                img.alt = "귀여운 강아지"
+                check = true
+                text.style.color = "black"
+                test.style.font = 'Century School'
+                text.style.fontStyle = 'italic'
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <img src="../images/pome.png" alt="귀여운 강아지" width="120" height="100">
+    <button onclick="changeImage()">눌러보세요</button>
+    <h1>안녕하세요!</h1>
+</body>
+</html>

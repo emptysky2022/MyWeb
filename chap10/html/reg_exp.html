@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reg-exp</title>
+</head>
+<body>
+    <script>
+        function checkNumeric(elem, email, msg){
+            const exp = /^[0-9]{10,15}$/
+            const exp_email = /^([\w\._-]+)@([a-zA-Z0-9\._-]+)(\.[a-zA-Z0-9]{2,})$/
+            if(!(elem.value.match(exp))){
+                alert(msg)
+                elem.focus()
+                return false
+            }
+            else if(!(email.value.match(exp_email))){
+                alert("이메일 양식이 잘못되었습니다.")
+                email.focus()
+                return false
+            }
+            else{
+                return true
+            }
+        }
+    </script>
+    <form>
+        전화번호(-없이 입력): <input type="text" id="phone"><br>
+        이메일: <input type="email" id="email"><br>
+        <input type="button" onclick="checkNumeric(document.getElementById('phone'), document.getElementById('email'), '숫자만 입력하세요!')" value="확인">
+    </form>
+</body>
+</html>
