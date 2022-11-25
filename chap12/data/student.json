@@ -1,0 +1,11 @@
+{
+    "name": "HongGilDong",
+    "age": 25,
+    "address": {
+        "nation": "Korea",
+        "city": "Seoul",
+        "postalCode": "123-456"
+    },
+    "특기": ["검술", "무술"],
+    "phone": "010-123-4567"
+}

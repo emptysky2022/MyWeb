@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get_content</title>
+    <style>
+        #dog{
+            margin: 10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            $("#text").click(() => {
+                alert($("#target").text())
+            })
+            $("#html").click(() => {
+                alert($("#target").html())
+            })
+            $("#text2").click(() => {
+                $("#target").text("안녕하세요!")
+            })
+            $("#html2").click(() => {
+                $("#target").html("<b>안녕하세요</b>")
+            })
+            $("#nameCheck").click(() => {
+                alert($("#name").val())
+            })
+            $("#nameChange").click(() => {
+                $("#name").val("홍길동")
+            })
+            $("#attr").click(() => {
+                alert($("#dog").attr("src").split("/").pop())
+                $("#target").text($("#dog").attr("src").split("/").pop())
+            })
+            $("#append").click(() => {
+                $("#target2").append("<b style='color:red'> hello </b>")
+            })
+            $("#prepend").click(() => {
+                $("#target2").prepend("<b style='color:blue'> hello </b>")
+            })
+            $("#remove").click(() => {
+                $(".container").remove()
+            })
+            $("#empty").click(() => {
+                $(".container").empty()
+            })
+        })
+    </script>
+</head>
+<body>
+    <p id="target">이것은 <strong>하나의</strong> 단락입니다</p>
+    <button id="text">text()</button>
+    <button id="html">html()</button><br>
+    <button id="text2">text2()</button>
+    <button id="html2">html2()</button><br>
+    이름: <input type="text" id="name">
+    <input type="button" value="확인" id="nameCheck">
+    <input type="button" value="변환" id="nameChange"><br>
+    <img src="../images/pome.png" id="dog"><br>
+    <button id="attr">attr()</button><br>
+    <p id="target2">여기가 단락입니다.</p>
+    <button id="append">append()</button>
+    <button id="prepend">prepend()</button><br>
+    <button id="remove">remove()</button>
+    <button id="empty">empty()</button><br>
+    <div class="container" style="border: 1px solid red;">
+        <p class="hello" style="background-color: yellow;">Hello</p>
+        <p class="goodbye" style="background-color: yellow;">Goodbye</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery animation</title>
+    <style>
+        .dog{
+            position: relative;
+            display: none;
+            width: 120px;
+            height: 100px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script>
+        // $(document).ready(() => {
+        //     $(":button").click(() => {
+        //         $("img").show("slow")
+        //     })
+        // })
+        $(document).ready(() => {
+            $("#show").click(() => {
+                $("#dog").toggle("slow").animate({left:'100px', opacity:'0.5', width:'150px'})
+            })
+            $("#fadeIn").click(() => {
+                $("#dog2").fadeIn("slow")
+            })
+            $("#fadeOut").click(() => {
+                $("#dog2").fadeOut("slow")
+            })
+            $("#slideUp").click(() => {
+                $("#dog3").slideUp("slow")
+            })
+            $("#slideDown").click(() => {
+                $("#dog3").slideDown("slow")
+            })
+            $("#chaining").click(() => {
+                $("#dog4").show().animate({left:'100px'}).fadeOut("slow").slideDown("slow")
+            })
+        })
+    </script>
+</head>
+<body>
+    <img class="dog" id="dog" src="../images/pome.png" alt="커여운 강아지"><br>
+    <button id="show">show it</button>
+    <button id="fadeIn">fadeIn</button>
+    <button id="fadeOut">fadeOut</button>
+    <button id="slideUp">slideUp</button>
+    <button id="slideDown">slideDown</button>
+    <button id="chaining">메소드 체이닝 시작</button>
+    <img class="dog" id="dog2" src="../images/pome.png" alt="커여운 강아지">
+    <img class="dog" id="dog3" src="../images/pome.png" alt="커여운 강아지">
+    <img class="dog" id="dog4" src="../images/pome.png" alt="커여운 강아지">
+</body>
+</html>

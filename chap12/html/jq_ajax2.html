@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first ajax</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <style>
+        div{
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+            overflow: scroll;
+        }
+    </style>
+    <script>
+        function getFromServer(){
+            let req
+            if(window.XMLHttpRequest){
+                req = new XMLHttpRequest()
+            }
+            else{
+                req = new ActiveXObject("Microsoft.XMLHTTP")
+            }
+            req.onreadystatechange = () => {
+                if(req.readyState == 4 && req.status == 200){
+                    $("#target").text(req.responseText)
+                }
+            }
+            req.open("GET", "../data/text1.txt", true)
+            req.send()
+        }
+    </script>
+</head>
+<body>
+    <div id="target"></div>
+    <button type="button" onclick="getFromServer()">Get Data</button>
+</body>
+</html>
