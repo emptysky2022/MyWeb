@@ -54,4 +54,7 @@ $RECYCLE.BIN/
 # zip file
 *.zip
 
+# my API
+my_api.json
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode

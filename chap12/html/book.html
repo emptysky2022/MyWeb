@@ -11,6 +11,11 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script>
         $(() => {
+            const requestURL = '../data/my_api.json'
+            const request = new XMLHttpRequest()
+            request.open('get', requestURL)
+            request.responseType = 'json'
+            request.send()
             $(":button").click(() => { 
                 $.ajax({
                     method: "GET",
@@ -19,7 +24,7 @@
                         query: $("#bookname").val(),
                     },
                     headers: {
-                        Authorization: "KakaoAK bf1eb9e572f0ecc7b22a41f2f258a98c"
+                        Authorization: "KakaoAK " + request.response.YOUR_API_KEY
                     },
                 }).done(function(msg){
                     console.log(msg)
