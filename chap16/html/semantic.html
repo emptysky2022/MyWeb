@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semantic web design</title>
+    <style>
+        body{
+            position: relative;
+        }
+        header{
+            background-color: yellow;
+            border: 1px solid black;
+        }
+        aside{
+            background-color: white;
+            border: 1px solid black;
+            width: 300px;
+            float: right;
+        }
+        section{
+            border: 1px solid black;
+            background-color: skyblue;
+            width: 600px;
+            float: left;
+        }
+        footer{
+            clear: both;
+            background-color: red;
+            border: 1px solid black;
+        }
+        @media screen and (max-width: 980px) {
+            body{
+                width: 94%;
+            }
+            section{
+                width: 65%;
+            }
+            aside{
+                width: 30%;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            section{
+                width: auto;
+                float: none;
+            }
+            aside{
+                width: auto;
+                float: none;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            header{
+                height: auto;
+            }
+            h1{
+                font-size: 20px;
+            }
+            aside{
+                display: none;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>header</h1>
+    </header>
+    <section>
+        <h1>main</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil unde ipsam sit neque? Assumenda cum atque obcaecati porro officiis, delectus numquam cumque aliquam sapiente? In unde architecto mollitia explicabo ad!
+            Beatae voluptates velit eius hic facilis at quod, est, aperiam eligendi assumenda, aut libero corrupti possimus non molestias impedit eum quidem veritatis. Ratione praesentium sequi laboriosam, quis quo fugiat maxime.
+            Ad reprehenderit temporibus atque omnis non hic, debitis amet? Odit optio et dolorum repellendus, aliquid illum minima accusamus sunt deleniti suscipit excepturi saepe tenetur quisquam autem reiciendis cumque aperiam est!</p>
+    </section>
+    <aside>
+        <h1>sidebar</h1>
+        <ul>
+            <li>fluid grids</li>
+            <li>Lorem, ipsum dolor.</li>
+        </ul>
+    </aside>
+    <footer>
+        <h1>footer</h1>
+    </footer>
+</body>
+</html>
